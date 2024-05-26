@@ -9,7 +9,7 @@ import json
 class JSONFilter(Filter):
     async def __call__(self, message: Message, repo: Repo) -> bool:
         try:
-            json.loads(message.text)
+            json.loads(message.text.strip())
         except ValueError as e:
             await message.answer("Получен неверный формат!")
             return False
