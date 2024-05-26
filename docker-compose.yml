@@ -1,15 +1,16 @@
 services:
-#  app:
-#    image: salaries-aggregation
-#    env_file:
-#      - .env.docker
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    volumes:
-#      - ./:/src
-#    depends_on:
-#      - mongodb
+  bot:
+    image: salaries-aggregation
+    env_file:
+      - .env.docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/src
+    depends_on:
+      - mongodb
+      - redis
 
   mongodb:
     image: mongo:6-jammy
