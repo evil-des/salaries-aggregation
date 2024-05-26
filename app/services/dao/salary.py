@@ -11,11 +11,6 @@ from app.models import InputData
 
 
 class SalaryDAO(DAO):
-    async def get_record_by_id(self, id: str):
-        res = self.collection.find_one({'_id': ObjectId(id)})
-        return await res.fetch
-        # return await self.collection.find_one({'_id': ObjectId(id)})
-
     async def aggregate(self, input_data: InputData):
         date_formats = {
             "hour": ("%Y-%m-%dT%H:00:00", timedelta(hours=1)),
