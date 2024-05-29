@@ -45,7 +45,7 @@ ignore-init-module-imports = true
 
 
 [tool.poetry]
-name = "salaries-aggregation"
+name = "app"
 version = "1.0.0"
 description = "Agregating salaries by desired period"
 authors = ["evil-des"]

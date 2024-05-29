@@ -1,1 +1,1 @@
-mongorestore --host localhost --port 27017 dump/
+/usr/bin/mongorestore --host mongodb /dump

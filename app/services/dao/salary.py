@@ -1,3 +1,4 @@
+import json
 from datetime import timedelta
 from typing import List, Optional
 
@@ -58,7 +59,7 @@ class SalaryDAO(DAO):
             "labels": labels
         }
         
-        return result
+        return json.dumps(result)
 
     @staticmethod
     def _generate_expected_intervals(input_data: InputData, dt_format: str, delta: timedelta):

@@ -10,9 +10,9 @@ Aggregate data using Telegram bot
 2. Install all dependencies:
 
     `poetry install`
-3. Set sqlalchemy.uri in alembic.ini, then run migration:
+3. Restore MongoDB from dump using this command:
 
-    `poetry run python -m alembic upgrade head`
+    `mongorestore --host localhost --port 27017 dump/`
 
 4. Run Telegram bot:
 
@@ -29,3 +29,6 @@ Aggregate data using Telegram bot
 3. Run this command for the first time build:
 
     `docker-compose up -d --build`
+4. Restore MongoDB from dump:
+
+    `docker exec -it salaries-aggregation-mongodb-1 /usr/bin/mongorestore --host localhost --port 27017 /dump/`
